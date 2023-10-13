@@ -1,0 +1,21 @@
+
+  <div class="card" *ngIf="token">
+    <p-menubar [model]="items">
+      <ng-template pTemplate="start">
+        <img
+          src="https://primefaces.org/cdn/primeng/images/primeng.svg"
+          height="40"
+          class="mr-2"
+        />
+      </ng-template>
+
+      <ng-template pTemplate="end">
+        <span class="userName">Hola, {{ userName }}</span>
+        <input type="text" pInputText placeholder="Search" class="w-full" />
+        <i class="pi pi-sign-out" (click)="logout()"></i>
+      </ng-template>
+    </p-menubar>
+  </div>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,48 @@
+{
+  "clients": [
+    {
+      "names": "yeison fabian",
+      "lastNames": "valencia segura",
+      "phone": "3125864860",
+      "address": "calle 28 # 51-12",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "hola",
+      "password": "123"
+    },
+    {
+      "username": "sass",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "username": "pepe",
+      "password": "yes",
+      "id": 3
+    },
+    {
+      "username": "Yeisonfvs",
+      "password": "asd",
+      "id": 4
+    },
+    {
+      "username": "lola",
+      "password": "12345",
+      "id": 5
+    },
+    {
+      "username": "Yeisonfvs",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "username": "Yeisonfvs",
+      "password": "123",
+      "id": 7
+    }
+  ]
+}

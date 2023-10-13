@@ -1,0 +1,60 @@
+<h1>Formulario Clientes</h1>
+
+<div class="container-form">
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">
+        <i class="pi pi-user"></i>
+      </span>
+      <input pInputText placeholder="Nombres" formControlName="names" />
+
+    </div>
+    <div class="text-danger"
+      *ngIf="formulario.get('names')?.hasError('required') && (submitted || formulario.get('names')?.touched)">Es
+      requerido.
+    </div>
+
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">
+        <i class="pi pi-user"></i>
+      </span>
+      <input pInputText placeholder="Apellidos" formControlName="lastNames" />
+
+    </div>
+    <div class="text-danger"
+      *ngIf="formulario.get('lastNames')?.hasError('required') && (submitted || formulario.get('lastNames')?.touched)">
+      Es
+      requerido.
+    </div>
+
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">
+        <i class="pi pi-phone"></i>
+      </span>
+      <input pInputText placeholder="Telefono" formControlName="phone" />
+
+    </div>
+    <div class="text-danger"
+      *ngIf="formulario.get('phone')?.hasError('required') && (submitted || formulario.get('phone')?.touched)">
+      Es
+      requerido.
+    </div>
+    <div class="text-danger" *ngIf="formulario.get('phone')?.errors?.['pattern']">ingresar exacto 10 numeros.</div>
+
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">
+        <i class="pi pi-map-marker"></i>
+      </span>
+      <input pInputText placeholder="Direccion" formControlName="address" />
+
+    </div>
+    <div class="text-danger"
+      *ngIf="formulario.get('address')?.hasError('required') && (submitted || formulario.get('address')?.touched)">
+      Es
+      requerido.
+    </div>
+
+    <p-button type="submit" label="Enviar" icon="pi pi-check" class="button"></p-button>
+
+  </form>
+</div>

@@ -1,0 +1,19 @@
+.container-form {
+    width: 60%;
+    height: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+.button {
+    position: absolute;
+    bottom: -80px;
+    right: 0px;
+}
+.p-inputgroup {
+    margin-top: 30px;
+    
+}
+
+.text-danger {
+   color: #d61010;
+}

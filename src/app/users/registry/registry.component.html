@@ -1,0 +1,38 @@
+<div class="registro">
+    <h1>Registrate</h1>
+
+
+    <div class="card flex justify-content-center">
+        <form [formGroup]="formRegistry" (ngSubmit)="onSubmitRegistry()">
+            <div class="card flex justify-content-center">
+                <span class="p-float-label">
+                    <input pInputText id="username" formControlName = "username" />
+                    <label htmlFor="username">Usuario</label>
+                </span>
+            </div>
+
+            <div class="password">
+                <span class="p-float-label">
+                    <p-password [feedback]="false" formControlName = "password" (change)="changeValidInput()"></p-password>
+                    <label for="password">Contraseña</label>
+                </span>
+            </div>
+
+            <div class="password">
+                <span class="p-float-label">
+                    <p-password [feedback]="false" formControlName = "confirmarPassword" (change)="changeValidInput()"></p-password>
+                    <label for="password">confirmar Contraseña</label>
+                </span>
+            </div>
+            <div  *ngIf="formRegistry.get('confirmarPassword')?.hasError('passwordMismatch')">Error los campos Password y Confirmar password son diferentes</div>
+
+            <div class="button">
+                <p-button type="submit" label="Registrarse" styleClass="p-button-rounded"></p-button>
+            </div>
+
+            
+           
+
+        </form>
+    </div>
+</div>
